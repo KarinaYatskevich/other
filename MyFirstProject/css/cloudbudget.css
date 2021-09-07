@@ -1,0 +1,176 @@
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.content{
+    flex: 1 1 auto;
+}
+
+.head{
+    color: white;
+    height: 782px;
+    background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url(../img/cloudbudget/title.jpg);
+    background-size: 100%;
+}
+.head_row{}
+
+.head_row_header{
+    display: flex;
+}
+
+.head_row_header_label{
+    padding: 55px 96px 0px 165px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.img{
+    padding: 0px 15px 0 0;
+}
+
+.head_row_header_sidebar{
+    padding: 70px 497px 0px 0px;
+    word-spacing: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.head_row_content{
+    text-align: center;
+    padding: 140px 0 0 0;
+}
+
+.head_row_content h1{
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;  
+    align-items: center;
+    letter-spacing: 0.05em;
+}
+
+.head_row_content p:first-child{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;  
+}
+
+.head_row_content p:last-child{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ED4C5C;
+}
+
+.signUp_button{
+    background: #FFFFFF;
+    border-radius: 6px;
+    width: 160px;
+    height: 50px;
+    border-color: #ED4C5C;
+}
+
+.use{
+    height: 500px;
+}
+
+.use_row{
+    display: flex;
+}
+
+.use_text{
+    padding: 140px 0px 0 165px;
+    width: 445px;
+    height: 107px;
+}
+
+.use_text h2{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+}
+
+.use_row p{
+    font-size: 14px;
+    line-height: 140%;
+    text-align: justify;
+}
+
+.use_row a{
+    font-size: 14px;
+    line-height: 140%;
+    text-align: justify;
+    color: #ED4C5C;
+}
+
+.use_photo{
+    padding: 94px 0 95px 125px;
+    
+}
+
+.use_photo_img{
+    width: 470px;
+    height: 311px;
+    border-radius: 15px;
+}
+.footer{
+    background-color: #FAFAFA;
+}
+
+.footer_row{
+    display: flex;
+    justify-content:space-around;
+}
+
+.footer_text1{
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.footer_text1 p:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer_text2{
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.footer_text2 p:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer_text3{
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.footer_text3 p:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer_text4{
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.footer_text4 p:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
