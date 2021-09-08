@@ -1,3 +1,21 @@
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
 .wrapper{
     min-height: 100%;
     overflow: hidden;
@@ -20,17 +38,16 @@
     background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url(../img/cloudbudget/title.jpg);
     background-size: 100%;
 }
-.head_row{}
 
 .head_row_header{
     display: flex;
 }
 
 .head_row_header_label{
-    padding: 55px 96px 0px 165px;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
+    padding: 59px 161px 0 201px;
 }
 
 .img{
@@ -38,11 +55,11 @@
 }
 
 .head_row_header_sidebar{
-    padding: 70px 497px 0px 0px;
     word-spacing: 40px;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
+    padding: 63px 0 0 0;
 }
 
 .head_row_content{
@@ -56,15 +73,19 @@
     line-height: 86px;  
     align-items: center;
     letter-spacing: 0.05em;
+    padding: 137px 0px 39px 0;
+    
 }
 
-.head_row_content p:first-child{
+.head_row_content p{
     font-weight: 600;
     font-size: 24px;
     line-height: 150%;  
+    text-align: center;
+    padding: 0 0 39px 0;
 }
 
-.head_row_content p:last-child{
+.head_row_content h4{
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -88,40 +109,97 @@
 }
 
 .use_text{
-    padding: 140px 0px 0 165px;
-    width: 445px;
-    height: 107px;
+    padding:140px 0 0 165px ;
 }
 
 .use_text h2{
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
+    width: 445px;
 }
 
-.use_row p{
+.use_text p{
     font-size: 14px;
     line-height: 140%;
     text-align: justify;
+    padding: 24px 0 5px 0;
+    width: 445px;
 }
 
-.use_row a{
+.use_text a{
+    color:#ED4C5C;
+}
+
+.use_row {
     font-size: 14px;
     line-height: 140%;
     text-align: justify;
-    color: #ED4C5C;
+    color: black;
 }
 
 .use_photo{
-    padding: 94px 0 95px 125px;
-    
+    background: #C4C4C4;
 }
 
 .use_photo_img{
-    width: 470px;
-    height: 311px;
     border-radius: 15px;
+    position: absolute;
+    width: 445px;
+    height: 311px;
+    left: 735px;
+    top: 876px;
 }
+
+
+.technology{
+    height: 500px;
+}
+
+.technology_name{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    padding: 63px 0px 52px 0px;
+}
+
+.technology_icons{
+    display: flex;
+    margin: 0 50px;
+    
+}
+
+.technology_cloud, .technology_secure, .technology_png, .technology_csv{
+    width: 255px;
+    height: 226px;
+    flex: 1;
+    text-align: center;
+}
+
+.cloud01, .secure02, .png03, .csv04 {
+    position: absolute;
+}
+
+.cloud, .secure, .png, .csv{
+    margin: 59px 0 0 18px ;
+}
+
+.technology_cloud p:first-of-type, .technology_secure p:first-of-type, .technology_png p:first-of-type, .technology_csv p:first-of-type{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 19px 0 10px 0;
+}
+
+.technology_cloud p:last-child, .technology_secure p:last-child, .technology_png p:last-child, .technology_csv p:last-child{
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    width: 191px;
+}
+
 .footer{
     background-color: #FAFAFA;
 }
