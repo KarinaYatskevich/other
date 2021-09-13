@@ -100,25 +100,31 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     padding: 120px 0 0 0;
 }
 
-.geist_photo1{
+.geist_photo {
     font-size: 150px;
     line-height: 1;
     font-weight: 800;
     letter-spacing: -.06em;  
-    animation: mig  6s infinite;}
+    animation: mig 6s var(--delay) infinite;
+}
     @keyframes mig {
         0% {
-            background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+            background: black;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        34% {
-            background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+        10% {
+            background: var(--color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        30% {
+            background: var(--color);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
         }
-        35% {
+        40% {
             background: black;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -128,72 +134,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        }
+
+.geist_photo1{
+    --delay: 0s;
+    --color: blue;
         }
 
 
 .geist_photo2{
-    font-size: 150px;
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: -.06em;
-    animation: mig2  6s infinite;}
-    @keyframes mig2 {
-        65% {
-            background: linear-gradient(45deg, rgb(143, 4, 80) 33%, rgb(253, 100, 126) 66%, #fdafda);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    --delay: 2s;
+    --color: pink;
         }
-        35% {
-            background: linear-gradient(45deg, rgb(143, 4, 80) 33%, rgb(253, 100, 126) 66%, #fdafda);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        34% {
-            background: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        0% {
-            background: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        66% {
-            background: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        100% {
-            background: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-    }}
 
 .geist_photo3{
-    font-size: 150px;
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: -.06em;
-animation: mig3  6s infinite;}
-    @keyframes mig3 {
-        100% {
-            background: linear-gradient(45deg, #ac3904 33%, #f87b54 66%, #ffb497) ;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        66% {
-            background: linear-gradient(45deg, #ac3904 33%, #f87b54 66%, #ffb497) ;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        0% {
-            background: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        65% {
-            background: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    --delay: 4s;
+    --color: orange;
         }

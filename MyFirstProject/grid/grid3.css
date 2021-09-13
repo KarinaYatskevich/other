@@ -37,19 +37,9 @@
     align-self: stretch;
     justify-self: stretch;
 
-    /*  grid-row-start: start;
+    /* grid-row-start: start;
     grid-column-start: col3; 
     or
     grid-row: 1/3;
     grid-column: 1 / 3;*/
 }
-
-.grid_item_2{}
-
-.grid_item_3{}
-
-.grid_item_4{}
-
-.grid_item_5{}
-
-.grid_item_6{}
