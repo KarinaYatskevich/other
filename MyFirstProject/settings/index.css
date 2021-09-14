@@ -1,7 +1,5 @@
-@custom-media --motionOK (prefers-reduced-motion: no-preference);
-
 :root {
-    --surface1: lch(10 0 0);
+    --surface1: lch(10 0 0); 
     --surface2: lch(15 0 0);
     --surface3: lch(20 0 0);
     --surface4: lch(25 0 0);
@@ -13,21 +11,16 @@
     --brand-bg1: lch(70 64 349);
     --brand-bg2: lch(60 84 300);
 
-    --brand-bg-gradient: linear-gradient(
-        to bottom, 
-        var(--brand-bg1), 
-        var(--brand-bg2)
-    );
+    --brand-bg-gradient: linear-gradient( bottom,  var(--brand-bg1), var(--brand-bg2));
 
     --thumb-highlight-color: lch(100 0 0 / 20%);
 
-    --space-xxs: .25rem;
-    --space-xs:  .5rem;
-    --space-sm:  1rem;
-    --space-md:  1.5rem;
-    --space-lg:  2rem;
-    --space-xl:  3rem;
-    --space-xxl: 6rem;
+    --space-xs:  8px;
+    --space-sm:  16px;
+    --space-md:  24px;
+    --space-lg:  32px;
+    --space-xl:  48px;
+    --space-xxl: 96px;
 
     @media (prefers-color-scheme: light) {
         & {
@@ -71,6 +64,11 @@ h1,h2,h3 {
     font-weight: 500;
 }
 
+small {
+    color: var(--text2);
+    line-height: 1.5;
+}
+
 main {
     display: grid;
     gap: var(--space-xl);
@@ -91,23 +89,18 @@ form {
     display: grid;
     gap: var(--space-xl) var(--space-xxl);
     --repeat: auto-fit;
-    grid-template-columns: 
-        repeat(var(--repeat), minmax(min(10ch, 100%), 35ch));
+    grid-template-columns: repeat(var(--repeat), minmax(min(10ch, 100%), 35ch));
     align-items: flex-start;
 
-    @media (orientation: landscape) and (width >= 640px) { & {
+    @media (orientation: landscape) and (width >= 640px) { 
+        & {
         --repeat: 2;
-    }}
+        }}
 }
 
 section {
     display: grid;
     gap: var(--space-md);
-}
-
-header {
-    display: grid;
-    gap: var(--space-xxs);
 }
 
 fieldset {
@@ -125,154 +118,10 @@ fieldset:focus-within {
     box-shadow: 0 5px 20px -10px hsl(0 0% 0% / 50%);
 }
 
-
-input[type="range"] {
-    --track-height: .5ex;
-    --track-fill: 0%;
-    --thumb-size: 3ex;
-    --thumb-offset: -1.25ex;
-    --thumb-highlight-size: 0px;
-
-    display: block;
-    inline-size: 100%;
-    margin: 1ex 0;
-    appearance: none;
-    background: transparent;
-    outline-offset: 5px;
-
-    @media (hover: none) {
-        & {
-        --thumb-size: 30px;
-        --thumb-offset: -14px;
-        }
-    }
-
-    &::-webkit-slider-runnable-track {
-        appearance: none;
-        block-size: var(--track-height);
-        border-radius: 5ex;
-        background: 
-        linear-gradient(
-            to right, 
-            transparent var(--track-fill), 
-            var(--surface1) 0%
-        ),
-        var(--brand-bg-gradient) fixed;
-    }
-
-    &::-moz-range-track {
-        appearance: none;
-        block-size: var(--track-height);
-        border-radius: 5ex;
-        background: 
-        linear-gradient(
-            to right, 
-            transparent var(--track-fill), 
-            var(--surface1) 0%
-        ),
-        var(--brand-bg-gradient) fixed;
-    }
-
-    &::-webkit-slider-thumb {
-        appearance: none;
-        cursor: ew-resize;
-        border: 3px solid var(--surface3);
-        block-size: var(--thumb-size);
-        inline-size: var(--thumb-size);
-        margin-top: var(--thumb-offset);
-        border-radius: 50%;
-        background: var(--brand-bg-gradient) fixed;
-        box-shadow: 0 0 0 var(--thumb-highlight-size) var(--thumb-highlight-color);
-        
-        @media (--motionOK) {
-        & {
-            transition: box-shadow .1s ease;
-        }
-        }
-
-        @nest .fieldset-item:focus-within & {
-        border-color: var(--surface2);
-        }
-    }
-
-    &::-moz-range-thumb {
-        appearance: none;
-        cursor: ew-resize;
-        border: 3px solid var(--surface3);
-        block-size: var(--thumb-size);
-        inline-size: var(--thumb-size);
-        margin-top: var(--thumb-offset);
-        border-radius: 50%;
-        background: var(--brand-bg-gradient) fixed;
-        box-shadow: 0 0 0 var(--thumb-highlight-size) var(--thumb-highlight-color);
-
-        @media (--motionOK) {
-        & {
-            transition: box-shadow .1s ease;
-        }
-        }
-
-        @nest .fieldset-item:focus-within & {
-        border-color: var(--surface2);
-        }
-    }
-
-    &:is(:hover,:active) {
-        --thumb-highlight-size: 10px;
-    }
-}
-input[type="checkbox"] {
-    inline-size: var(--space-sm);
-    block-size: var(--space-sm);
-    margin: 0;
-    outline-offset: 5px;
-    accent-color: var(--brand);
-    position: relative;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-input[type="checkbox"]:hover::before {
-        --thumb-scale: 1;
-    }
-
-    @media (hover: none) {
-        & {
-        inline-size: var(--space-md);
-        block-size: var(--space-md);
-        }
-    }
-
-    input[type="checkbox"]::before {
-        --thumb-scale: .01;
-        --thumb-highlight-size: var(--space-xl);
-
-        content: "";
-        inline-size: var(--thumb-highlight-size);
-        block-size: var(--thumb-highlight-size);
-        clip-path: circle(50%);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: var(--thumb-highlight-color);
-        transform-origin: center center;
-        transform: 
-        translateX(-50%) 
-        translateY(-50%) 
-        translateZ(-1px) 
-        scale(var(--thumb-scale))
-        ;
-        will-change: transform;
-
-        @media (--motionOK) {
-        & {
-            transition: transform .2s ease;
-        }
-        }
-    }
-
 .fieldset-item {
     background: var(--surface3);
     transition: background .2s ease;
+    background-color: rgb(49, 48, 48);
 
     display: grid;
     grid-template-columns: var(--space-lg) 1fr;
@@ -288,52 +137,158 @@ input[type="checkbox"]:hover::before {
         padding-inline: 0 var(--space-xl);
     }
 }
-    .fieldset-item:focus-within {
-        background: var(--surface2);
+.fieldset-item:focus-within {
+    background: var(--surface2);
+}
+
+.fieldset-item:focus-within svg {
+    fill: white;
+}
+
+.fieldset-item:focus-within picture {
+    clip-path: circle(50%);
+    background: var(--brand-bg-gradient) fixed;
+}
+
+.fieldset-item  > :is(.input-stack, label) {
+    display: grid;
+    gap: var(--space-xs);
+}
+
+.fieldset-item  > .input-stack > label {
+    display: contents;
+}
+
+.fieldset-item  > picture {
+    block-size: var(--space-xl);
+    inline-size: var(--space-xl);
+    clip-path: circle(40%);
+    display: inline-grid;
+    place-content: center;
+    background: var(--surface3) fixed;
+
+    @media (--motionOK) {
+    & {
+        transition: clip-path .3s ease;
     }
-        .fieldset-item:focus-within svg {
-        fill: white;
+    }
+}
+
+.fieldset-item  svg {
+    fill: white;
+    block-size: var(--space-md);
+}
+
+.fieldset-item  > :is(picture, input[type="checkbox"]) {
+    place-self: center;
+}
+
+input[type=range] {
+    --track-height: .5ex;
+    --track-fill: 0%;
+    --thumb-size: 3ex;
+    --thumb-offset: -1.25ex;
+    --thumb-highlight-size: 0px;
+    display: block;
+    inline-size: 100%;
+    margin: 1ex 0;
+    appearance: none;
+    background: transparent;
+    outline-offset: 5px;
+}
+@media (hover: none) {
+    input[type=range] { --thumb-size: 30px; --thumb-offset: -14px;}
+}
+    
+input[type=range]::-webkit-slider-runnable-track {
+    appearance: none;
+    block-size: var(--track-height);
+    border-radius: 5ex;
+    background: linear-gradient(to right, transparent var(--track-fill), var(--surface1) 0%), var(--brand-bg-gradient) fixed;
+}
+input[type=range]::-moz-range-track {
+    appearance: none;
+    block-size: var(--track-height);
+    border-radius: 5ex;
+    background: linear-gradient(to right, transparent var(--track-fill), var(--surface1) 0%), var(--brand-bg-gradient) fixed;
+}
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    cursor: ew-resize;
+    border: 3px solid var(--surface3);
+    block-size: var(--thumb-size);
+    inline-size: var(--thumb-size);
+    margin-top: var(--thumb-offset);
+    border-radius: 50%;
+    background: var(--brand-bg-gradient) fixed;
+    box-shadow: 0 0 0 var(--thumb-highlight-size) var(--thumb-highlight-color);
+}
+@media (--motionOK) {
+    input[type=range]::-webkit-slider-thumb {
+        transition: box-shadow 0.1s ease;
+    }
+}
+    @nest .fieldset-item:focus-within & {
+        input[type=range]::-webkit-slider-thumb {
+        border-color: var(--surface2);
         }
-
-        .fieldset-item:focus-within picture {
-        clip-path: circle(50%);
-        background: var(--brand-bg-gradient) fixed;
-        }
-
-    .fieldset-item  > :is(.input-stack, label) {
-        display: grid;
-        gap: var(--space-xs);
     }
-
-    .fieldset-item  > .input-stack > label {
-        display: contents;
+input[type=range]::-moz-range-thumb {
+    appearance: none;
+    cursor: ew-resize;
+    border: 3px solid var(--surface3);
+    block-size: var(--thumb-size);
+    inline-size: var(--thumb-size);
+    margin-top: var(--thumb-offset);
+    border-radius: 50%;
+    background: var(--brand-bg-gradient) fixed;
+    box-shadow: 0 0 0 var(--thumb-highlight-size) var(--thumb-highlight-color);
+}
+@media (--motionOK) {
+    input[type=range]::-moz-range-thumb {
+        transition: box-shadow 0.1s ease;
     }
-
-    .fieldset-item  > picture {
-        block-size: var(--space-xl);
-        inline-size: var(--space-xl);
-        clip-path: circle(40%);
-        display: inline-grid;
-        place-content: center;
-        background: var(--surface3) fixed;
-
-        @media (--motionOK) {
-        & {
-            transition: clip-path .3s ease;
-        }
-        }
+}
+    @nest .fieldset-item:focus-within & {
+    input[type=range]::-moz-range-thumb {
+        border-color: var(--surface2);
     }
+}
+input[type=range]:is(:hover,:active) {
+    --thumb-highlight-size: 10px;
+}
 
-    .fieldset-item  svg {
-        fill: var(--text2);
-        block-size: var(--space-md);
+input[type=checkbox] {
+    inline-size: var(--space-sm);
+    block-size: var(--space-sm);
+    margin: 0;
+    outline-offset: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+input[type=checkbox]:hover::before {
+    --thumb-scale: 1;
+}
+
+input[type=checkbox]::before {
+    --thumb-scale: .01;
+    --thumb-highlight-size: var(--space-xl);
+    content: "";
+    inline-size: var(--thumb-highlight-size);
+    block-size: var(--thumb-highlight-size);
+    clip-path: circle(50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--thumb-highlight-color);
+    transform-origin: center center;
+    transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(var(--thumb-scale));
+    will-change: transform;
+}
+@media (--motionOK) {
+    input[type=checkbox]::before {
+        transition: transform 0.2s ease;
     }
-
-    .fieldset-item  > :is(picture, input[type="checkbox"]) {
-        place-self: center;
-    }
-
-small {
-    color: var(--text2);
-    line-height: 1.5;
 }
