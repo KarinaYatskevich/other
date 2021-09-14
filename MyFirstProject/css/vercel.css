@@ -144,7 +144,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 .geist_photo2{
     --delay: 2s;
-    --color: pink;
+    --color: rgb(253, 2, 44);
         }
 
 .geist_photo3{
