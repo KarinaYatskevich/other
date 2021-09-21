@@ -71,12 +71,12 @@ main {
     place-content: center;
     padding: var(--space-sm);
 }
-@media (width >= 540px) {
+@media (min-width: 540px) {
     main {
         padding: var(--space-lg);
     }
 }
-@media (width >= 800px) {
+@media (min-width: 800px) {
     main {
         padding: var(--space-xl);
     }
@@ -90,7 +90,7 @@ form {
     grid-template-columns: repeat(var(--repeat), minmax(min(10ch, 100%), 35ch));
     align-items: flex-start;
 }
-@media (orientation: landscape) and (width >= 640px) {
+@media (orientation: landscape) and (min-width: 640px) {
     form {
         --repeat: 2;
     }
@@ -249,7 +249,7 @@ input[type=checkbox]::before {
     padding-inline: var(--space-md);
     background-color: rgb(49, 48, 48);
 }
-@media (width >= 540px) {
+@media (min-width: 540px) {
     .fieldset-item {
         grid-template-columns: var(--space-xxl) 1fr;
         gap: var(--space-xs);

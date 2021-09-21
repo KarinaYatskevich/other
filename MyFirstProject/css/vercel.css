@@ -139,7 +139,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     --color: blue;
         }
 
-
 .geist_photo2{
     --delay: 2s;
     --color: rgb(253, 2, 44);
@@ -149,7 +148,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     --delay: 4s;
     --color: orange;
         }
-
 
 .versel_button {
     height: 50px;
@@ -284,25 +282,25 @@ text-align: center;
 .header_circles {
     padding: 0 0 0 60px;
 }
+.circle{
+    border-color: var(--color);
+    border-radius: 50%;
+    padding: 0 8px;
+    background-color: var(--background-color);
+}
 .circle_red {
     margin: 0px 0px 0px -50px;
-    border-color: red;
-    border-radius: 50%;
-    padding: 0 8px;
-    background-color: red;
+    --color: red;
+    --background-color: red;
 }
 .circle_yellow {
-    border-color: orange;
-    border-radius: 50%;
-    padding: 0 8px;
-    background-color: orange;
+    --color: orange;
+    --background-color: orange;
     margin: 0 10px;
 }
 .circle_green {
-    border-color: green;
-    border-radius: 50%;
-    padding: 0 8px;
-    background-color: green;
+    --color: green;
+    --background-color: green;
 }
 .header_index {
     position: absolute;
@@ -373,19 +371,17 @@ text-align: center;
     background: black;
     background-color: black;
     margin: 35px 20px 40px 0;
-
+}
+.website_basket_row{
+    background: #eaeaea;
+    background-color: #eaeaea;
 }
 .website_basket_gray_row {
     border-radius: 10%;
-    background: #eaeaea;
-    background-color: #eaeaea;
     margin: 55px 0px 20px 0px;
-
 }
 .demo_website_content_header {
     border-radius: 10%;
-    background: #eaeaea;
-    background-color: #eaeaea;
     margin: 50px 5px 23px 5px;
 }
 .demo_website_content_picture{
@@ -398,8 +394,6 @@ text-align: center;
 }
 .demo_website_content_small_content {
     border-radius: 5px;
-    background: #eaeaea;
-    border-color: #eaeaea;
     grid-column: 5 /8;
     margin: 0 20px 30px 0;
     
@@ -415,8 +409,6 @@ text-align: center;
 }
 .demo_website_content_big_content {
     border-radius: 5px;
-    background: #eaeaea;
-    border-color: #eaeaea;
     grid-column: 5 / 10;
     margin: 0px 10px 0px 0px;
 }
