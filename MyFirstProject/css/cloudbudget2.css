@@ -199,6 +199,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 .page__features {
 }
 .features {
+    background: #fafafa;
+    padding: 0px 0px 124px 0px;
+
 }
 .features__container {
 }
@@ -206,13 +209,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     display: flex;
     flex-wrap: wrap;
 }
-.features__title{
+.item-title{
     font-weight: 600;
     line-height: 44px;
     font-size: 36px;
     text-align: center;
     padding-top: 63px;
     padding-bottom: 63px;
+}
+.features__title{
 }
 .features__column {
     flex: 0 1 33.333%;
@@ -273,6 +278,67 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 
 /* -------------features-------------*/
+
+/* -------------technology-------------*/
+
+
+.page__technology {
+}
+.technology {
+    
+}
+.technology__container {
+}
+.technology__title {
+    padding: 47px 0px 52px 0px;
+}
+.technology__body {
+    display: flex;
+    flex-wrap: wrap;
+}
+.technology__column {
+    flex: 0 1 25%;
+    padding: 0 34px 0 30px;
+}
+@media (max-width: 739px) {
+    .technology__column {
+        flex: 0 1 50%;
+        margin: 0px 0px 20px 0px;
+    }
+}
+@media (max-width: 380px) {
+    .technology__column {
+        flex: 0 1 100%;
+        margin: 0px 0px 30px 0px;
+    }
+}
+.technology__item {
+}
+.technology__icon {
+    text-align: center;
+}
+.technology__number {
+    text-align: center;
+}
+.cloud {
+    margin: -40px 0px 0px 0px;
+}
+.technology__main-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: center; 
+    padding: 10px 0px 10px 0px;
+}
+.technology__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
+    text-align: center;
+}
+
+/* -------------technology-------------*/
+
 
 /*---------------page--------------*/
 
