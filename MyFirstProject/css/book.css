@@ -1,0 +1,104 @@
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family: Lato; color: black;font-weight: 500;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+/*---------menu-----------*/
+
+.menu{
+    border: 1px solid #9c836e;
+    border-radius: 5px;
+    width: 20%;
+}
+a:link{
+    font-weight: bold;
+    text-decoration: none;
+    color: #3792b3;
+    
+}
+ul.lst li em{
+    font-style: normal;
+    font-weight: normal;
+    color: #9c836e;
+    float: right;
+}
+ul.lst li a{
+    position: relative;
+    display: block;
+    padding: 7px 30px 7px 7px;
+    border-bottom: 1px solid #f3f2e8;
+    overflow: hidden;
+    z-index: 2;
+}
+ul.lst li strong{
+    float: left;
+    color: #3792b3;
+}
+ul.lst li{
+    position: relative;
+    margin: 0 0 2px 0;
+}
+ul.lst li span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+    background: #f3f2e8;
+}
+ul.lst li:hover span{
+    background: #ecebe1;
+}
+
+/*---------menu-----------*/
+
+/*---------box-----------*/
+ol.specials li{
+    width: 240px;
+    float: left;
+    margin: 0 15px 1.5em 0;
+}
+ol.specials li div.special{
+    position: relative;
+    border: 15px solid #e2e1d4;
+    border-radius: 8px;
+    -webkit-border-radius:8px ;
+    -moz-border-radius: 8px;
+}
+ol.specials li div.special a span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 1.3em;
+    color: #ccc;
+    background: #333;
+    background: rgba(0, 0, 0, .7);
+}
+ol.specials li div.special a span strong{
+    display: block;
+    padding: 10px 10px 0 10px;
+    color: #fff;
+}
+ol.specials li div.special a span em{
+    display: block;
+    padding: 0px 10px 10px 10px;
+    color: #e3c887;
+}
+/*---------box-----------*/

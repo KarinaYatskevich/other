@@ -71,7 +71,7 @@ main {
     place-content: center;
     padding: var(--space-sm);
 }
-@media (min-width: 540px) {
+@media (width >= 540px) {
     main {
         padding: var(--space-lg);
     }
@@ -169,10 +169,8 @@ input[type=range]::-webkit-slider-thumb {
         transition: box-shadow 0.1s ease;
     }
 }
-@nest .fieldset-item:focus-within & {
-    input[type=range]::-webkit-slider-thumb {
-        border-color: var(--surface2);
-    }
+.fieldset-item:focus-within input[type=range]::-webkit-slider-thumb {
+    border-color: var(--surface2);
 }
 input[type=range]::-moz-range-thumb {
     appearance: none;
@@ -190,11 +188,10 @@ input[type=range]::-moz-range-thumb {
         transition: box-shadow 0.1s ease;
     }
 }
-@nest .fieldset-item:focus-within & {
-    input[type=range]::-moz-range-thumb {
+.fieldset-item:focus-within input[type=range]::-moz-range-thumb {
         border-color: var(--surface2);
-    }
 }
+
 input[type=range]:is(:hover,:active) {
     --thumb-highlight-size: 10px;
 }

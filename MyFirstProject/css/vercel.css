@@ -33,8 +33,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 }
 
 .header{
-    height: 80px;
-    max-width: 100%;
     top: 0;
     width: 100%;
     backdrop-filter: saturate(180%) blur(10px);
@@ -43,12 +41,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 .header_row{
     display: flex;
+    flex-wrap: wrap;
     padding: 27px 0px 0px 82px;
     letter-spacing: 0.5px;
 }
 
 .header_links{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 0 0 180px;
 }
@@ -60,6 +60,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 .header_registration{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 0 0 60px;
 }
@@ -200,9 +201,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 .geist_container{
     display: flex;
     flex-direction: column;
-    position: relative;
     min-width: 1px;
-    max-width: 100%;
 }
 
 .geist_line {
@@ -262,6 +261,37 @@ text-align: center;
     height: 900px;
     padding: 50px 0 0 0;
 }
+
+@media(max-width: 900px){
+    .demo_wrapper{
+        padding-top: 100px ;
+    }
+}
+
+@media(max-width: 700px){
+    .demo_wrapper{
+        padding-top: 200px ;
+    }
+}
+
+@media(max-width: 500px){
+    .demo_wrapper{
+        padding-top: 650px ;
+        height: 1400px;
+    }
+}
+
+@media(max-width: 300px){
+    .demo_wrapper{
+        padding-top: 800px ;
+    }
+}
+
+@media(max-width: 200px){
+    .demo_wrapper{
+        padding-top: 1100px ;
+    }
+}
 .demo{
     grid-column-start: 2;
 }
@@ -303,8 +333,7 @@ text-align: center;
     --background-color: green;
 }
 .header_index {
-    position: absolute;
-    margin: -1px 0px 0px 100px;
+    margin: -1px 0px -11px 30px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom: 1px solid #eaeaea;
